@@ -19,9 +19,9 @@ class SitemapCsv implements SitemapFactoryInterface
 
         foreach ($this->sitemap_data as $index => $sitemap_datum) {
             if ($index == 0) {
-                fputcsv($fp, array_keys($sitemap_datum), separator: config('sitemap.csv.separator'));
+                fputcsv(stream: $fp, fields: array_keys($sitemap_datum), separator: config('sitemap.types.csv.separator'));
             }
-            fputcsv($fp, array_values($sitemap_datum), separator: config('sitemap.csv.separator'));
+            fputcsv($fp, array_values($sitemap_datum), separator: config('sitemap.types.csv.separator'));
         }
 
         fclose($fp);
