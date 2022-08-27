@@ -15,7 +15,7 @@ class Sitemap
             throw new Exception('Sitemap data is empty!', 422);
         }
         foreach ($sitemap_data as $sitemap_datum) {
-            if (!in_array(['loc', 'lastmod', 'priority', 'changefreq'], array_keys($sitemap_datum))) {
+            if (['loc', 'lastmod', 'priority', 'changefreq'] != array_keys($sitemap_datum)) {
                 throw new Exception('Wrong sitemap data!', 422);
             }
         }
