@@ -1,17 +1,19 @@
 {
     "name": "shevtsovtn/get-sitemap",
-    "description": "You can generategit sitemap in one of three extensions.",
+    "description": "You can generate sitemap in one of three extensions.",
     "type": "library",
+    "require": {
+        "php": "8.1"
+    },
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Shevtsovtn\\GetSitemap\\": "src/"
+            "Sitemap\\": "./src"
         }
     },
     "authors": [
         {
-            "name": "timur.shevtsov",
-            "email": "timur.shevtsov1984@gmail.com"
+            "name": "Timur Shevtsov"
         }
     ],
     "require-dev": {
