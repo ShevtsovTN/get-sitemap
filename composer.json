@@ -3,7 +3,8 @@
     "description": "You can generate sitemap in one of three extensions.",
     "type": "library",
     "require": {
-        "php": "8.0|8.1"
+        "php": "8.0|8.1",
+        "laravel/framework": "^9.0"
     },
     "license": "MIT",
     "autoload": {
