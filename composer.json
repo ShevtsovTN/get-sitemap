@@ -1,6 +1,7 @@
 {
     "name": "shevtsovtn/get-sitemap",
     "description": "You can generate sitemap in one of three extensions.",
+    "version": "1.0.0",
     "type": "library",
     "require": {
         "php": "^8.0"
