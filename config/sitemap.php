@@ -2,9 +2,11 @@
 
 return [
     'default' => 'xml',
-    'xml' => [],
-    'csv' => [
-        'separator' => ';'
-    ],
-    'json' => []
+    'types' => [
+        'xml' => [],
+        'csv' => [
+            'separator' => ';'
+        ],
+        'json' => []
+    ]
 ];
