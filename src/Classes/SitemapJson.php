@@ -15,6 +15,6 @@ class SitemapJson implements SitemapFactoryInterface
 
     public function save(string $file_path)
     {
-        file_put_contents(sprintf('%s/sitemap.json', $file_path), json_encode($this->sitemap_data));
+        file_put_contents(sprintf('%s/sitemap.json', $file_path), json_encode(array_values($this->sitemap_data)));
     }
 }
