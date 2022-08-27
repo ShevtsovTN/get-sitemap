@@ -1,0 +1,35 @@
+{
+    "name": "shevtsovtn/get-sitemap",
+    "description": "You can generategit sitemap in one of three extensions.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shevtsovtn\\GetSitemap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "timur.shevtsov",
+            "email": "timur.shevtsov1984@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^7.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sitemap\\SitemapServiceProvider"
+            ],
+            "aliases": {
+                "Sitemap": "Sitemap\\SitemapFacade"
+            }
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
+    }
+}
