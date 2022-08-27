@@ -16,7 +16,7 @@ class SitemapStaticFactory
     {
         Sitemap::checkSitemapData($sitemap_data);
 
-        $objName = sprintf('Classes\Sitemap%s', FileType::getFileType($file_type));
+        $objName = sprintf('Sitemap\Classes\Sitemap%s', FileType::getFileType($file_type));
 
         return (new $objName($sitemap_data))->save($file_path);
     }
