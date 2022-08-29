@@ -3,7 +3,7 @@
 namespace Sitemap;
 
 use Exception;
-use Sitemap\Classes\FileType;
+use Sitemap\Classes\File;
 use Sitemap\Classes\Sitemap;
 
 class SitemapStaticFactory
@@ -13,9 +13,11 @@ class SitemapStaticFactory
      */
     public static function create(string $file_type, string $file_path, array $sitemap_data): void
     {
+        File::checkDirectory($file_path);
+
         Sitemap::checkSitemapData($sitemap_data);
 
-        $objName = sprintf('Sitemap\Classes\Sitemap%s', FileType::getFileType($file_type));
+        $objName = sprintf('Sitemap\Classes\Sitemap%s', File::getFileType($file_type));
 
         (new $objName($sitemap_data))->save($file_path);
     }

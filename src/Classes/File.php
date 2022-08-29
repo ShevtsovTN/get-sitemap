@@ -4,7 +4,7 @@ namespace Sitemap\Classes;
 
 use Exception;
 
-class FileType
+class File
 {
     /**
      * @throws Exception
@@ -19,5 +19,17 @@ class FileType
             : config('sitemap.default');
 
         return ucfirst(trim($file_type));
+    }
+
+    /**
+     * @param string $file_path
+     * @return void
+     * @throws Exception
+     */
+    public static function checkDirectory(string $file_path): void
+    {
+        if (!is_writable(dirname($file_path))) {
+            throw new Exception('Access denied for writing in this directory!', 403);
+        }
     }
 }
