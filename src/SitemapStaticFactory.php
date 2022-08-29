@@ -3,6 +3,7 @@
 namespace Sitemap;
 
 use Exception;
+use Illuminate\Support\Collection;
 use Sitemap\Classes\File;
 use Sitemap\Classes\Sitemap;
 
@@ -11,7 +12,7 @@ class SitemapStaticFactory
     /**
      * @throws Exception
      */
-    public static function create(string $file_type, string $file_path, array $sitemap_data): void
+    public static function create(string $file_type, string $file_path, array|Collection $sitemap_data): void
     {
         File::checkDirectory($file_path);
 
