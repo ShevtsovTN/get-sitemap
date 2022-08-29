@@ -7,7 +7,7 @@ use Sitemap\Interfaces\SitemapFactoryInterface;
 
 class SitemapFile implements SitemapFactoryInterface
 {
-    protected array $sitemap_data;
+    protected array|Collection $sitemap_data;
 
     public function __construct(array|Collection $sitemap_data)
     {
