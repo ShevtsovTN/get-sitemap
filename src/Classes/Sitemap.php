@@ -3,13 +3,14 @@
 namespace Sitemap\Classes;
 
 use Exception;
+use Illuminate\Support\Collection;
 
 class Sitemap
 {
     /**
      * @throws Exception
      */
-    public static function checkSitemapData(array $sitemap_data): void
+    public static function checkSitemapData(array|Collection $sitemap_data): void
     {
         if (empty($sitemap_data)) {
             throw new Exception('Sitemap data is empty!', 422);
