@@ -5,15 +5,8 @@ namespace Sitemap\Classes;
 use Sitemap\Interfaces\SitemapFactoryInterface;
 use XMLWriter;
 
-class SitemapXml implements SitemapFactoryInterface
+class SitemapXml extends SitemapFile implements SitemapFactoryInterface
 {
-    private array $sitemap_data;
-
-    public function __construct(array $sitemap_data)
-    {
-        $this->sitemap_data = $sitemap_data;
-    }
-
     public function save(string $file_path)
     {
         $xw = new XMLWriter();

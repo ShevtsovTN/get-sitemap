@@ -4,14 +4,8 @@ namespace Sitemap\Classes;
 
 use Sitemap\Interfaces\SitemapFactoryInterface;
 
-class SitemapCsv implements SitemapFactoryInterface
+class SitemapCsv extends SitemapFile implements SitemapFactoryInterface
 {
-    private array $sitemap_data;
-
-    public function __construct(array $sitemap_data)
-    {
-        $this->sitemap_data = $sitemap_data;
-    }
 
     public function save(string $file_path)
     {
